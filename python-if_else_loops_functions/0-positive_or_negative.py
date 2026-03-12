@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 import random
-
 number = random.randint(-10, 10)
 
 if number > 0:
-    sign = "positive"
-elif number < 0:
-    sign = "negative"
+    print(f"{number} is positive")
+elif number == 0:
+    print(f"{number} is zero")
 else:
-    sign = "zero"
-print(f"{number} is {sign}")
+    print(f"{number} is negative")
