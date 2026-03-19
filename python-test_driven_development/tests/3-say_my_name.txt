@@ -7,13 +7,13 @@ My name is John Smith
 My name is Walter White
 
 >>> say_my_name("Bob")
-My name is Bob
+My name is Bob 
 
 >>> say_my_name("", "")
-My name is
+My name is  
 
 >>> say_my_name("Alice", "")
-My name is Alice
+My name is Alice 
 
 >>> say_my_name(12, "White")
 Traceback (most recent call last):
