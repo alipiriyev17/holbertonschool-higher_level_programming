@@ -1,0 +1,97 @@
+Using curl to consume data from an API
+
+curl (Client URL) is a command-line tool used to transfer data
+from or to a server using various protocols such as HTTP and HTTPS.
+It is commonly used to interact with RESTful APIs.
+
+--------------------------------------------------
+
+1. Checking curl installation
+
+Command:
+curl --version
+
+Description:
+This command displays the installed curl version and
+the supported protocols.
+
+Example Output:
+curl 7.81.0 (x86_64-linux-gnu)
+Protocols: http https ftp ftps
+Features: IPv6 SSL
+
+--------------------------------------------------
+
+2. Fetching data from a website
+
+Command:
+curl http://example.com
+
+Description:
+This command retrieves the HTML content of the webpage.
+
+Use Case:
+Useful for testing if a website is reachable from the terminal.
+
+--------------------------------------------------
+
+3. Fetching data from an API
+
+Command:
+curl https://jsonplaceholder.typicode.com/posts
+
+Description:
+This command retrieves a list of posts from the JSONPlaceholder API.
+
+Example Response (JSON):
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sample title",
+    "body": "sample body text"
+  }
+]
+
+Use Case:
+Fetching data from a REST API.
+
+--------------------------------------------------
+
+4. Fetching only headers
+
+Command:
+curl -I https://jsonplaceholder.typicode.com/posts
+
+Description:
+The -I option retrieves only the response headers.
+
+Example Output:
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 27520
+
+Use Case:
+Checking server status and response headers without downloading the content.
+
+--------------------------------------------------
+
+5. Making a POST request
+
+Command:
+curl -X POST -d "title=foo&body=bar&userId=1" https://jsonplaceholder.typicode.com/posts
+
+Description:
+The -X option specifies the HTTP method.
+The -d option sends data to the server.
+
+Example Response:
+{
+  "title": "foo",
+  "body": "bar",
+  "userId": 1,
+  "id": 101
+}
+
+Use Case:
+Creating a new resource in an API.
