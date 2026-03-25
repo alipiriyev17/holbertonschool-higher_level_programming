@@ -1,0 +1,108 @@
+HTTP vs HTTPS
+
+HTTP (HyperText Transfer Protocol) is the protocol used for communication
+between web clients and servers. It allows the transfer of web pages,
+images, and other resources over the internet.
+
+HTTPS (HyperText Transfer Protocol Secure) is the secure version of HTTP.
+It uses SSL/TLS encryption to protect the data exchanged between the
+client and the server.
+
+Main Differences:
+
+- HTTP does not encrypt data.
+- HTTPS encrypts data using SSL/TLS.
+- HTTP is less secure and vulnerable to attacks.
+- HTTPS protects sensitive information such as passwords and credit cards.
+- HTTPS uses port 443 while HTTP uses port 80.
+
+--------------------------------------------------
+
+Structure of an HTTP Request
+
+An HTTP request is sent by a client to a server and contains:
+
+1. Request Line
+   - Method (GET, POST, PUT, DELETE)
+   - URL or path
+   - HTTP version
+
+Example:
+GET /index.html HTTP/1.1
+
+2. Headers
+Headers provide additional information about the request.
+
+Examples:
+Host: example.com
+User-Agent: Mozilla/5.0
+Accept: application/json
+
+3. Body (optional)
+Contains data sent to the server, usually with POST or PUT requests.
+
+--------------------------------------------------
+
+Structure of an HTTP Response
+
+An HTTP response is sent by the server back to the client.
+
+1. Status Line
+Contains the HTTP version and status code.
+
+Example:
+HTTP/1.1 200 OK
+
+2. Headers
+Provide information about the server and response.
+
+Examples:
+Content-Type: text/html
+Content-Length: 305
+
+3. Body
+Contains the requested resource such as HTML, JSON, or images.
+
+--------------------------------------------------
+
+Common HTTP Methods
+
+GET
+Description: Retrieves data from a server.
+Use Case: Fetching a webpage or retrieving API data.
+
+POST
+Description: Sends data to the server.
+Use Case: Submitting a form or creating a new resource.
+
+PUT
+Description: Updates an existing resource.
+Use Case: Updating user information in an API.
+
+DELETE
+Description: Removes a resource.
+Use Case: Deleting a user or record from a database.
+
+--------------------------------------------------
+
+Common HTTP Status Codes
+
+200 OK
+Description: Request succeeded.
+Scenario: Successfully retrieving a webpage or API response.
+
+201 Created
+Description: A resource was successfully created.
+Scenario: Creating a new user through an API.
+
+301 Moved Permanently
+Description: Resource has been permanently moved to another URL.
+Scenario: Website redirecting to a new address.
+
+404 Not Found
+Description: The requested resource was not found.
+Scenario: Visiting a page that does not exist.
+
+500 Internal Server Error
+Description: Server encountered an unexpected condition.
+Scenario: Server error while processing a request.
