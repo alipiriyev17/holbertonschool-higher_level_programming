@@ -1,6 +1,9 @@
 -- 7-insert_value.sql
--- Insert a row into first_table
+-- Insert a new row in first_table
 
+-- Mövcud sətirləri silmək istəmirsənsə, IF NOT EXISTS ilə yoxlaya bilərsən:
 INSERT INTO first_table (id, name)
-VALUES (89, 'Best School')
-ON DUPLICATE KEY UPDATE id = id;
+SELECT 89, 'Best School'
+WHERE NOT EXISTS (
+    SELECT 1 FROM first_table WHERE id = 89
+);
