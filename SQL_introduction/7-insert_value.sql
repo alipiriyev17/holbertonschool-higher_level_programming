@@ -1,0 +1,6 @@
+-- 7-insert_value.sql
+-- Insert a row into first_table
+
+INSERT INTO first_table (id, name)
+VALUES (89, 'Best School')
+ON DUPLICATE KEY UPDATE id = id;
