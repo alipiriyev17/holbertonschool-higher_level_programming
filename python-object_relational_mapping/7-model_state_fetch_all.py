@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""Creates states table"""
+"""Lists all State objects"""
 
 import sys
 from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
@@ -13,4 +14,8 @@ if __name__ == "__main__":
         pool_pre_ping=True
     )
 
-    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    for state in session.query(State).order_by(State.id).all():
+        print("{}: {}".format(state.id, state.name))
